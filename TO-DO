@@ -1,0 +1,281 @@
+
+Phase 1 — Install Debian
+
+Phase 2 — Enable contrib/non-free repos
+
+Edit:
+
+  sudo nano /etc/apt/sources.list
+
+  Make sure Debian 13 repos contain:
+
+  main contrib non-free-firmware
+
+UPDATES:
+
+  sudo apt update && sudo apt full-upgrade -y
+
+Reboot:
+  sudo reboot
+
+PHASE 3 — Install Build Tools
+
+  sudo apt install -y build-essential git curl wget unzip cmake meson ninja-build pkg-config
+
+PHASE 4 — Install Xorg
+
+  sudo apt install xorg xorg-dev xinput xbacklight xdotool dbus-x11
+
+PHASE 5 — Install i3
+
+  sudo apt install i3 sxhkd
+
+Verify:
+  i3 --version
+  sxhkd -v
+
+PHASE 6 — Install UI Components
+  sudo apt install polybar rofi dunst picom feh
+
+PHASE 7 — File Manager
+
+  sudo apt install thunar thunar-volman thunar-archive-plugin gvfs-backends
+
+Phase 8 — Audio
+sudo apt install -y \
+pipewire-audio \
+pamixer \
+pulsemixer \
+pavucontrol
+
+Used by:
+
+scripts/changevolume
+Phase 9 — Power & Network
+sudo apt install -y \
+network-manager-gnome \
+lxpolkit \
+xfce4-power-manager \
+acpi \
+acpid
+
+Enable:
+
+sudo systemctl enable acpid
+Phase 10 — Utilities
+sudo apt install -y \
+flameshot \
+qimgv \
+fd-find
+Phase 11 — Fonts
+
+The repo installs Nerd Fonts separately.
+
+For your setup:
+
+mkdir -p ~/.local/share/fonts
+
+Download:
+
+Nerd Fonts Releases
+
+I'd recommend:
+
+JetBrainsMono Nerd Font
+
+or
+
+CaskaydiaCove Nerd Font
+
+Extract into:
+
+~/.local/share/fonts/
+
+Refresh:
+
+fc-cache -fv
+Phase 12 — Install Ghostty
+
+Debian repos may not have the latest Ghostty.
+
+Official docs:
+
+Ghostty Documentation
+
+Install Ghostty first before copying configs.
+
+Verify:
+
+ghostty
+
+runs.
+
+Phase 13 — Install Brave
+
+Official:
+
+Brave Linux Installation
+
+After installation:
+
+brave-browser
+Phase 14 — Install Zsh
+sudo apt install -y zsh
+
+Set default shell:
+
+chsh -s $(which zsh)
+
+Log out and back in.
+
+Phase 15 — Install Eza
+
+Debian 13 should have:
+
+sudo apt install -y eza
+
+Verify:
+
+eza --version
+Phase 16 — Display Manager
+
+The script installs LightDM.
+
+I'd recommend:
+
+sudo apt install -y lightdm lightdm-gtk-greeter
+
+Enable:
+
+sudo systemctl enable lightdm
+Phase 17 — Copy Config Files
+
+Create:
+
+mkdir -p ~/.config
+
+Copy from the repo:
+
+i3/
+
+to:
+
+~/.config/i3/
+Phase 18 — Make Scripts Executable
+chmod +x ~/.config/i3/scripts/*
+Phase 19 — Install GTK Themes & Icons
+
+The repo expects:
+
+Gruvbox
+Nord
+Catppuccin
+Dracula
+Everforest
+Github Dark
+TokyoNight
+
+You can install them manually later.
+
+For now:
+
+sudo apt install -y nwg-look
+
+which lets you switch GTK themes visually.
+
+Phase 20 — Install Neovim From Source
+
+Since you want latest Neovim:
+
+git clone https://github.com/neovim/neovim.git
+cd neovim
+make CMAKE_BUILD_TYPE=Release
+sudo make install
+
+Verify:
+
+nvim --version
+Phase 21 — Install Lazy.nvim
+
+Official:
+
+Lazy.nvim Installation Guide
+
+Then install theme plugins:
+
+gruvbox.nvim
+nord.nvim
+catppuccin
+tokyonight.nvim
+dracula.nvim
+everforest
+github-nvim-theme
+Phase 22 — Your Theme System Modification
+
+Modify every:
+
+~/.config/i3/themes/*/theme.conf
+
+Example:
+
+name=Gruvbox
+
+gtk=Gruvbox-Dark
+icons=Gruvbox-Plus-Dark
+
+ghostty=Gruvbox Dark
+
+nvim=gruvbox
+
+Then modify:
+
+~/.config/i3/scripts/thememenu
+
+to update Neovim as we discussed.
+
+Phase 23 — First Start
+
+From TTY:
+
+startx
+
+or reboot:
+
+sudo reboot
+
+At LightDM:
+
+Session → i3
+
+Login.
+
+You should get:
+
+i3
+Polybar
+Picom
+Dunst
+Rofi
+Ghostty
+Thunar
+
+running.
+
+Things I'd Remove From The Original Repo For Your Build
+
+Based on our discussion:
+
+Delete:
+✓ workspaces.conf
+✓ welcome notification block
+✓ Firefox keybinds
+✓ Geany keybinds
+✓ st terminal references
+
+Replace:
+✓ Firefox → Brave
+✓ st → Ghostty
+✓ Geany → Neovim
+✓ Bash → Zsh
+
+That will give you a cleaner Debian 13 + i3 setup tailored to what you want while still keeping the structure and theme system from the original repository.
