@@ -1,1 +1,68 @@
+"AFTER REBOOT"
+RUN:
+    sudo apt update && sudo apt full-upgrade -y
+    sudo reboot
+
+"ENABLE SUDO"
+RUN: 
+    su -
+    apt install sudo
+    usermod -aG sudo YOUR_USERNAME
+
+"ESSENTIAL BUILD PACKAGES"
+RUN: 
+  sudo apt install build-essential git curl wget unzip tar pkg-config cmake ninja-build meson gettext make gcc g++
+
+"INSTALL XORG"
+RUN:
+  sudo apt install xorg xorg-dev xinput xbacklight xdotool dbus-x11
+
+"INSTALL I3"
+RUN: 
+  sudo apt install i3 sxhkd
+
+"INSTALLING DISPLAY MANAGER 'LIGHTDM'"
+RUN: 
+  sudo apt install lightdm lightdm-gtk-greeter
+
+  sudo systemctl enable lightdm
+
+"INSTALL UI COMPONENTS"
+RUN:
+  sudo apt install polybar rofi dunst picom feh
+
+"INSTALL FILE MANAGER 'THUNAR'"
+RUN:
+  sudo apt install thunar thunar-volman thunar-archive-plugin gvfs-backends
+
+"AUDIO"
+RUN:
+  sudo apt install pipewire-audio pamixer pulsemixer pavucontrol
+'Used by scripts/changevolume'
+
+"UTILITIES"
+RUN:
+  sudo apt install flameshot qimgv fd-find
+
+"INSTALL FONTS"
+RUN:
+  mkdir -p ~/.local/share/fonts
+  
+  cd ~/.local/share/fonts
+
+  wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+
+  unzip JetBrainsMono.zip
+
+  fc-cache -fv
+
+"INSTALLING GHOSTTLY BUILDING FROM SOURCE"
+RUN:
+  sudo apt install zig libgtk-4-dev libadwaita-1-dev blueprint-compiler
+
+  git clone https://github.com/ghostty-org/ghostty
+
+  cd ghostty
+
+  zig build -p ~/.local
 
