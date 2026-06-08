@@ -46,7 +46,7 @@ PHASE 6 — Install UI Components
 
 PHASE 7 — File Manager
 
-  sudo apt install thunar thunar-volman thunar-archive-plugin gvfs-backends
+  sudo apt install thunar thunar-volman thunar-archive-plugin gvfs-backends gvfs
 
 PHASE 8 — Audio
   sudo apt install pipewire-audio pamixer pulsemixer pavucontrol
@@ -61,7 +61,7 @@ Enable:
   sudo systemctl enable acpid
 
 PHASE 10 — Utilities
-sudo apt install flameshot qimgv fd-find
+sudo apt install flameshot qimgv fd-find xclip xsel
 
 PHASE 11 — Fonts
 RUN:
@@ -88,13 +88,17 @@ INSTALL GHOSTTY:
 
 Phase 13 — Install Brave
 
-Official:
+sudo curl -fsSLo \
+/usr/share/keyrings/brave-browser-archive-keyring.gpg \
+https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
-Brave Linux Installation
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] \
+https://brave-browser-apt-release.s3.brave.com/ stable main" | \
+sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
-After installation:
+  sudo apt update
 
-brave-browser
+  sudo apt install brave-browser
 
 PHASE 14 — Install Zsh
 
@@ -168,7 +172,11 @@ sudo make install
 Verify:
 
 nvim --version
+
 Phase 21 — Install Lazy.nvim
+
+PHASE 22 - BLUETOOTH
+  sudo apt install blueman bluez
 
 Phase 22 — First Start
 
