@@ -62,29 +62,16 @@ PHASE 10 — Utilities
 sudo apt install flameshot qimgv fd-find
 
 PHASE 11 — Fonts
-For your setup:
+RUN:
+  mkdir -p ~/.local/share/fonts
+  
+  cd ~/.local/share/fonts
 
-mkdir -p ~/.local/share/fonts
+  wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 
-Download:
+  unzip JetBrainsMono.zip
 
-Nerd Fonts Releases
-
-I'd recommend:
-
-JetBrainsMono Nerd Font
-
-or
-
-CaskaydiaCove Nerd Font
-
-Extract into:
-
-~/.local/share/fonts/
-
-Refresh:
-
-fc-cache -fv
+  fc-cache -fv
 
 Phase 12 — Install Ghostty
 DEPENDENCIES:
