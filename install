@@ -1,5 +1,10 @@
 
-Phase 1 — Install Debian
+Phase 1 — ENABLE SUDO 
+  su -
+
+  apt install sudo
+
+  usermod -aG sudo YOUR_USERNAME
 
 Phase 2 — Enable contrib/non-free repos
 
@@ -82,20 +87,15 @@ Refresh:
 fc-cache -fv
 
 Phase 12 — Install Ghostty
+DEPENDENCIES:
+  sudo apt install zig libgtk-4-dev libadwaita-1-dev blueprint-compiler
 
-Debian repos may not have the latest Ghostty.
+INSTALL GHOSTTY:
+  git clone https://github.com/ghostty-org/ghostty
 
-Official docs:
+  cd ghostty
 
-Ghostty Documentation
-
-Install Ghostty first before copying configs.
-
-Verify:
-
-ghostty
-
-runs.
+  zig build -p ~/.local
 
 Phase 13 — Install Brave
 
