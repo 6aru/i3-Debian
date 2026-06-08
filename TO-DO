@@ -124,7 +124,7 @@ Debian 13 should have:
 Verify:
   eza --version
 
-Phase 16 — Display Manager
+PHASE 16 — Display Manager
 
   sudo apt install -y lightdm lightdm-gtk-greeter
 
@@ -144,9 +144,12 @@ i3/
 to:
 
 ~/.config/i3/
-Phase 18 — Make Scripts Executable
-chmod +x ~/.config/i3/scripts/*
-Phase 19 — Install GTK Themes & Icons
+
+PHASE 18 — Make Scripts Executable
+
+  chmod +x ~/.config/i3/scripts/*
+
+PHASE 19 — Install GTK Themes & Icons
 
 The repo expects:
 
@@ -166,9 +169,7 @@ sudo apt install -y nwg-look
 
 which lets you switch GTK themes visually.
 
-Phase 20 — Install Neovim From Source
-
-Since you want latest Neovim:
+PHASE 20 — Install Neovim From Source
 
 git clone https://github.com/neovim/neovim.git
 cd neovim
@@ -180,20 +181,7 @@ Verify:
 nvim --version
 Phase 21 — Install Lazy.nvim
 
-Official:
-
-Lazy.nvim Installation Guide
-
-Then install theme plugins:
-
-gruvbox.nvim
-nord.nvim
-catppuccin
-tokyonight.nvim
-dracula.nvim
-everforest
-github-nvim-theme
-Phase 22 — Your Theme System Modification
+PHASE 22 — Your Theme System Modification
 
 Modify every:
 
@@ -226,39 +214,3 @@ or reboot:
 
 sudo reboot
 
-At LightDM:
-
-Session → i3
-
-Login.
-
-You should get:
-
-i3
-Polybar
-Picom
-Dunst
-Rofi
-Ghostty
-Thunar
-
-running.
-
-Things I'd Remove From The Original Repo For Your Build
-
-Based on our discussion:
-
-Delete:
-✓ workspaces.conf
-✓ welcome notification block
-✓ Firefox keybinds
-✓ Geany keybinds
-✓ st terminal references
-
-Replace:
-✓ Firefox → Brave
-✓ st → Ghostty
-✓ Geany → Neovim
-✓ Bash → Zsh
-
-That will give you a cleaner Debian 13 + i3 setup tailored to what you want while still keeping the structure and theme system from the original repository.
