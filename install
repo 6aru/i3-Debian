@@ -1,3 +1,5 @@
+#INSTALLING PURE DEBIAN 13 WITH I3 WINDOW MANAGER FROM TTY
+#WITH SEVARAL COLOR-SCHEMES
 
 Phase 1 — ENABLE SUDO 
   su -
@@ -168,30 +170,7 @@ Verify:
 nvim --version
 Phase 21 — Install Lazy.nvim
 
-PHASE 22 — Your Theme System Modification
-
-Modify every:
-
-~/.config/i3/themes/*/theme.conf
-
-Example:
-
-name=Gruvbox
-
-gtk=Gruvbox-Dark
-icons=Gruvbox-Plus-Dark
-
-ghostty=Gruvbox Dark
-
-nvim=gruvbox
-
-Then modify:
-
-~/.config/i3/scripts/thememenu
-
-to update Neovim as we discussed.
-
-Phase 23 — First Start
+Phase 22 — First Start
 
 From TTY:
 
