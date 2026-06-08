@@ -173,9 +173,7 @@ Verify:
 
 nvim --version
 
-Phase 21 — Install Lazy.nvim
-
-PHASE 22 - BLUETOOTH
+PHASE 21 - BLUETOOTH
   sudo apt install blueman bluez
 
 Phase 22 — First Start
