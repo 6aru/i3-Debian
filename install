@@ -176,7 +176,12 @@ nvim --version
 PHASE 21 - BLUETOOTH
   sudo apt install blueman bluez
 
-Phase 22 — First Start
+PHASE 22 - AUTOTILING 
+
+  sudo apt install python3-pip
+  pip install autotiling
+
+Phase 23 — First Start
 
 From TTY:
 
