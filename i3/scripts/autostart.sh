@@ -8,7 +8,7 @@ lxpolkit &
 xsettingsd &
 dunst -config ~/.config/i3/dunst/dunstrc &
 picom --config ~/.config/i3/picom/picom.conf -b &
-feh --bg-fill ~/.config/i3/wallpaper/wallhaven-218x7m_3440x1440.png &
+feh --bg-fill ~/.config/i3/wallpaper/gruvbox.jpg &
 
 # sxhkd
 pkill -x sxhkd
