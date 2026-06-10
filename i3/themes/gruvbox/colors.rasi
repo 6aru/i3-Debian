@@ -1,9 +1,9 @@
 * {
     bg:        #282828;
     fg:        #ebdbb2;
-    accent:    #d79921;
-    urgent:    #cc241d;
-    entry-fg:  #d3869b;
+    accent:    #cc241d;
+    urgent:    #fb4934;
+    entry-fg:  #b16286;
     prompt-fg: #458588;
 
     background-color: @bg;
