@@ -181,7 +181,11 @@ PHASE 22 - AUTOTILING
   sudo apt install python3-pip
   pip install autotiling
 
-Phase 23 — First Start
+PHASE 23 - CLI TOOLS
+
+  sudo apt install fzf fd-find ripgrep bat tree zoxide
+
+Phase 24 — First Start
 
 From TTY:
 
