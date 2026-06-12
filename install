@@ -35,7 +35,7 @@ PHASE 4 — Install Xorg
 
 PHASE 5 — Install i3
 
-  sudo apt install i3 sxhkd
+  sudo apt install i3 sxhkd timeshift
 
 Verify:
   i3 --version
