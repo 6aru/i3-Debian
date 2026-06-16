@@ -1,3 +1,4 @@
+
 #INSTALLING PURE DEBIAN 13 WITH I3 WINDOW MANAGER FROM TTY
 #WITH SEVARAL COLOR-SCHEMES centered around anime
 
@@ -193,6 +194,28 @@ PHASE 22 - AUTOTILING
 PHASE 23 - CLI TOOLS
 
   sudo apt install fzf fd-find ripgrep bat tree zoxide
+
+Phase 24 - music poly bar module
+sudo apt install \
+mpd \
+mpc \
+jq \
+mpg123 \
+ffmpeg \
+-y
+
+mkdir -p ~/.config/mpd/playlists
+
+chmod +x ~/.config/i3/scripts/music/*
+
+systemctl --user enable mpd
+systemctl --user start mpd
+
+mpc update
+
+mpc save Favorites
+
+
 
 Phase 24 — First Start
 
