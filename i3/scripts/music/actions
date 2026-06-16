@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+[ -z "$song" ] && exit
+
+choice=$(printf \
+"▶ Play\n⏭ Play Next\n➕ Queue\n❤️ Favorite" \
+| rofi -dmenu -p "$song")
+
+case "$choice" in
+
+    "▶ Play")
+        mpc clear
+        mpc search title "$song" | head -n1 | xargs -r mpc add
+        mpc play
+        ;;
+
+    "⏭ Play Next")
+        file=$(mpc search title "$song" | head -n1)
+        [ -z "$file" ] && exit
+        pos=$(mpc status | awk '/#/{gsub("#","",$2); print $2}')
+        mpc insert "$file"
+        ;;
+   
+    "➕ Queue")
+        mpc search title "$song" | head -n1 | xargs -r mpc add
+        ;;
+
+    "❤️ Favorite")
+        grep -Fxq "$song" ~/.config/mpd/favorites.txt || \
+        echo "$song" >> ~/.config/mpd/favorites.txt
+        ;;
+
+esac
