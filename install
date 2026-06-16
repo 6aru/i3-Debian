@@ -144,23 +144,29 @@ PHASE 18 — Make Scripts Executable
 
 PHASE 19 — Install GTK Themes & Icons
 
-The repo expects:
+dependencies 
+sudo apt install \
+git \
+sassc \
+meson \
+ninja-build \
+gtk2-engines-murrine \
+gtk2-engines-pixbuf \
+-y
 
-Gruvbox
-Nord
-Catppuccin
-Dracula
-Everforest
-Github Dark
-TokyoNight
+GTK 
+git clone https://github.com/vinceliuice/Colloid-gtk-theme.git
 
-You can install them manually later.
+cd Colloid-gtk-theme
 
-For now:
+./install.sh
 
-sudo apt install -y nwg-look
+ICONS 
+git clone https://github.com/vinceliuice/Colloid-icon-theme.git
 
-which lets you switch GTK themes visually.
+cd Colloid-icon-theme
+
+./install.sh
 
 PHASE 20 — Install Neovim From Source
 
@@ -172,6 +178,9 @@ sudo make install
 Verify:
 
 nvim --version
+
+installing my nvim config
+git clone https://github.com/6aru/nvim ~/.config/nvim
 
 PHASE 21 - BLUETOOTH
   sudo apt install blueman bluez
