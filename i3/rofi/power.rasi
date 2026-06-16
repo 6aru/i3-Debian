@@ -6,7 +6,7 @@
 
 configuration {
     show-icons: true;
-    icon-theme: "Coloid";
+    icon-theme: "Colloid";
     location: 0;
     display-drun: "Launch:";
 }
