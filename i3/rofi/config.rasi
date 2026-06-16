@@ -2,7 +2,7 @@
 
 configuration {
     show-icons: true;
-    icon-theme: "Papirus";
+    icon-theme: "Colloid";
     location: 0;
     font: "JetBrainsMono Nerd Font 12";
     display-drun: "Launch:";
