@@ -42,7 +42,7 @@
 
     # History
     sticky_history = yes
-    history_length = 20
+    history_length = 100
 
     # Advanced
     dmenu = /usr/bin/dmenu -p dunst:
