@@ -48,7 +48,7 @@ if [ ${#themes[@]} -eq 0 ]; then
     exit 1
 fi
 
-current=$(cat "$STATE" 2>/dev/null || echo "github_dark")
+current=$(cat "$STATE" 2>/dev/null || echo "gruvbox")
 
 # Build display-name → dir-name menu from each theme's `name = ...` line
 declare -A name_to_dir
