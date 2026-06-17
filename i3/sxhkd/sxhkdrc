@@ -52,10 +52,6 @@ super + shift + b
 super + shift + v
     ~/.config/i3/scripts/volumemenu
 
-# Power Menu
-super + shift + p
-    ~/.config/i3/scripts/power
-
 # Screenshot Menu
 Print
     ~/.config/i3/scripts/screenshotmenu
@@ -353,6 +349,7 @@ super + s
 super + shift + t
 	~/.config/i3/scripts/thememenu
 
-# Shutdown or Reboot
+# Power Menu Shutdown or Reboot
 super + x
-	~/.config/i3/scripts/power
+    ~/.config/i3/scripts/power
+
