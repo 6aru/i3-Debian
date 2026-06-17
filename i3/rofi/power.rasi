@@ -6,6 +6,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 @import "~/.config/i3/rofi/colors.rasi"
+@import "~/.config/i3/rofi/fonts.rasi"
 
 /*
 USE_BUTTONS=YES
