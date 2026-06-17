@@ -81,30 +81,25 @@ countdown () {
 
 # take shots
 shotnow () {
-	cd ${dir} && sleep 0.5 && maim -u -f png | copy_shot
-	notify_view
+	flameshot full
 }
 
 shot5 () {
 	countdown '5'
-	sleep 1 && cd ${dir} && maim -u -f png | copy_shot
-	notify_view
+	flameshot full
 }
 
 shot10 () {
 	countdown '10'
-	sleep 1 && cd ${dir} && maim -u -f png | copy_shot
-	notify_view
+	flameshot full
 }
 
 shotwin () {
-	cd ${dir} && maim -u -f png -i `xdotool getactivewindow` | copy_shot
-	notify_view
+	flameshot screen -n 0
 }
 
 shotarea () {
-	cd ${dir} && maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.25 -l | copy_shot
-	notify_view
+	flameshot gui
 }
 
 # Execute Command
