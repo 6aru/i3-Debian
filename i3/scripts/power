@@ -6,7 +6,7 @@
 ## Applets : Power Menu
 
 # Import Current Theme
-rofi -theme ~/.config/i3/rofi/power.rasi
+theme="$HOME/.config/i3/rofi/power.rasi"
 
 # Theme Elements
 prompt="`hostname`"
