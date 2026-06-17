@@ -1,6 +1,6 @@
 # i3 Quick Start
 
-Welcome to the JustAGuy Linux i3 setup. This file is yours to delete once you're comfortable.
+Welcome to the BARU'S i3 setup. This file is yours to delete once you're comfortable.
 
 ## The one keybind to remember
 
