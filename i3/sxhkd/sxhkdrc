@@ -44,6 +44,22 @@ super + alt + a
 super + d
 	Discord
 
+# Brightness Menu
+super + shift + b
+    ~/.config/i3/scripts/brightnessmenu
+
+# Volume Menu
+super + shift + v
+    ~/.config/i3/scripts/volumemenu
+
+# Power Menu
+super + shift + p
+    ~/.config/i3/scripts/power
+
+# Screenshot Menu
+Print
+    ~/.config/i3/scripts/screenshotmenu
+
 # === WINDOW STATE ===
 
 # Toggle Floating
