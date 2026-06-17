@@ -52,10 +52,6 @@ super + shift + b
 super + shift + v
     ~/.config/i3/scripts/volumemenu
 
-# Screenshot Menu
-Print
-    ~/.config/i3/scripts/screenshotmenu
-
 # === WINDOW STATE ===
 
 # Toggle Floating
@@ -334,6 +330,10 @@ XF86MonBrightnessDown
 	xbacklight -10
 
 # === SCREENSHOTS ===
+
+# Screenshot Menu
+Print
+    ~/.config/i3/scripts/screenshotmenu
 
 # Take a Screenshot (Region Select)
 super + shift + s
