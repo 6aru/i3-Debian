@@ -14,11 +14,15 @@ super + shift + Return
 
 # Launch Browser (Firefox)
 super + b
-	firefox
+	brave
 
-# Launch Private Browser (Firefox Incognito Mode)
+# Launch Private Browser (Brave Incognito Mode)
 super + shift + b
-	firefox -private-window
+	brave -private-window
+
+# Lauch Quicklinks Menu 
+super + shift + q
+    ~/.config/i3/scripts/quicklinks
 
 # Show Keybinding Help Script
 super + slash
