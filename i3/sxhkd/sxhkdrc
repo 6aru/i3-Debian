@@ -12,7 +12,7 @@ super + Return
 super + shift + Return
 	~/.config/i3/scripts/scratchpad
 
-# Launch Browser (Firefox)
+# Launch Browser (Brave)
 super + b
 	brave
 
