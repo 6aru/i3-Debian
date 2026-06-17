@@ -21,23 +21,9 @@ fi
 prompt="${backlight}%"
 mesg="Device: ${card}, Level: $level"
 
-if [[ "$theme" == *'type-1'* ]]; then
-	list_col='1'
-	list_row='4'
-	win_width='400px'
-elif [[ "$theme" == *'type-3'* ]]; then
-	list_col='1'
-	list_row='4'
-	win_width='120px'
-elif [[ "$theme" == *'type-5'* ]]; then
-	list_col='1'
-	list_row='4'
-	win_width='425px'
-elif [[ ( "$theme" == *'type-2'* ) || ( "$theme" == *'type-4'* ) ]]; then
-	list_col='4'
-	list_row='1'
-	win_width='550px'
-fi
+list_col='4'
+list_row='1'
+win_width='550px'
 
 # Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
