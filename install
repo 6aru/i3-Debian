@@ -43,7 +43,7 @@ Verify:
   sxhkd -v
 
 PHASE 6 — Install UI Components
-  sudo apt install polybar rofi dunst picom feh
+  sudo apt install polybar rofi dunst picom feh gsimplecal
 
 PHASE 7 — File Manager
 
