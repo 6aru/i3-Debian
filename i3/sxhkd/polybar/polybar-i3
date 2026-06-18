@@ -4,4 +4,6 @@ killall -q polybar
 # Wait until the processes have been shut down
 # while pgrep -x polybar >/dev/null; do sleep 1; done
 # Launch
-polybar -c ~/.config/i3/polybar/config.ini &
+polybar left -c ~/.config/i3/polybar/config.ini &
+polybar center -c ~/.config/i3/polybar/config.ini &
+polybar right -c ~/.config/i3/polybar/config.ini &
