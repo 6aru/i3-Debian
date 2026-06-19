@@ -29,7 +29,7 @@ window {
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @primary;
     cursor:                      "default";
     background-color:            @background;
 }
@@ -42,7 +42,7 @@ mainbox {
     padding:                     30px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @primary;
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
 }
@@ -55,7 +55,7 @@ inputbar {
     padding:                     0px;
     border:                      0px;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @primary;
     background-color:            transparent;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "prompt"];
@@ -71,14 +71,14 @@ textbox-prompt-colon {
     str:                         "";
     padding:                     12px 16px;
     border-radius:               0px;
-    background-color:            @urgent;
+    background-color:            @alert;
     text-color:                  @background;
 }
 prompt {
     enabled:                     true;
     padding:                     12px;
     border-radius:               0px;
-    background-color:            @active;
+    background-color:            @secondary;
     text-color:                  @background;
 }
 
@@ -89,7 +89,7 @@ message {
     padding:                     12px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @primary;
     background-color:            @background-alt;
     text-color:                  @foreground;
 }
@@ -106,7 +106,7 @@ error-message {
     padding:                     12px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @primary;
     background-color:            @background;
     text-color:                  @foreground;
 }
@@ -129,7 +129,7 @@ listview {
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @primary;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      "default";
@@ -143,7 +143,7 @@ element {
     padding:                     40px 10px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @primary;
     background-color:            @background-alt;
     text-color:                  @foreground;
     cursor:                      pointer;
@@ -157,6 +157,6 @@ element-text {
     horizontal-align:            0.5;
 }
 element selected.normal {
-    background-color:            var(selected);
+    background-color:            var(primary);
     text-color:                  var(background);
 }
