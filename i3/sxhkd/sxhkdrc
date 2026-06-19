@@ -46,11 +46,12 @@ super + d
 
 # Brightness Menu
 super + shift + b
-    ~/.config/i3/scripts/brightnessmenu
+    ~/.config/i3/scripts/brightness
 
 # Volume Menu
 super + shift + v
-    ~/.config/i3/scripts/volumemenu
+    ~/.config/i3/scripts/volumemenu 
+
 
 # === WINDOW STATE ===
 
@@ -333,7 +334,7 @@ XF86MonBrightnessDown
 
 # Screenshot Menu
 Print
-    ~/.config/i3/scripts/screenshotmenu
+    ~/.config/i3/scripts/screenshot
 
 # Take a Screenshot (Region Select)
 super + shift + s
