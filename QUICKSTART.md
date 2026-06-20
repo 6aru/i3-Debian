@@ -35,6 +35,6 @@ Welcome to the BARU'S i3 setup. This file is yours to delete once you're comfort
 ## Getting help
 
 - Press `Super + /` — searchable keybind reference
-- Repo: <https://codeberg.org/justaguylinux/i3-setup>
+- Repo: <https://github.com/6aru/i3-Debian>
 
 Delete this file (`rm ~/QUICKSTART-i3.md`) whenever you're done with it.
