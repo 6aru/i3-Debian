@@ -1,6 +1,6 @@
-# GUIDE.md
+# GUIDE_ME.md
 
-This guide explains every component used by i3-Debian-Main.
+This guide explains every component used by i3-Debian.
 
 If you do not want to run `install.sh`, follow this guide manually.
 
