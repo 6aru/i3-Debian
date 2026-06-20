@@ -220,6 +220,13 @@ sudo apt update
 sudo apt install -y brave-browser
 
 echo
+echo "[+] Installing i3 Configuration"
+
+mkdir -p ~/.config
+
+cp -r i3 ~/.config/
+
+echo
 echo "[+] Installing Neovim"
 
 sudo apt install -y neovim 
