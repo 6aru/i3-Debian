@@ -242,6 +242,10 @@ mkdir -p ~/.config/mpd/playlists
 echo
 echo "[+] Enabling MPD"
 
+mkdir -p ~/.config/mpd
+
+cp mpd.conf ~/.config/mpd/mpd.conf
+
 systemctl --user enable mpd
 systemctl --user start mpd || true
 
