@@ -229,6 +229,18 @@ mkdir -p ~/.config
 cp -r "$SCRIPT_DIR/i3" ~/.config/
 
 echo
+echo "[+] Installing Zsh Configuration"
+
+cp "$SCRIPT_DIR/.zshrc" "$HOME/.zshrc"
+
+echo
+echo "[+] Setting Zsh as Default Shell"
+
+if [ "$SHELL" != "$(which zsh)" ]; then
+    chsh -s "$(which zsh)"
+fi
+
+echo
 echo "[+] Installing Neovim"
 
 sudo apt install -y neovim 
