@@ -225,7 +225,7 @@ echo "[+] Installing Neovim"
 sudo apt install -y neovim 
 
 echo
-echo " [+] Installing Baru's Nvim Config "
+echo " [+] Installing Baru's Neovim Config "
 git clone https://github.com/6aru/nvim ~/.config/nvim
 
 echo
@@ -251,8 +251,7 @@ echo
 echo "[+] Making i3 Scripts Executable"
 
 if [ -d "$HOME/.config/i3/scripts" ]; then
-chmod +x "$HOME"/.config/i3/scripts/*
-chmod +x "$HOME"/.config/i3/scripts/music/* 2>/dev/null || true
+    find "$HOME/.config/i3/scripts" -type f -exec chmod +x {} \;
 fi
 
 # Ensure ~/.local/bin is on PATH
