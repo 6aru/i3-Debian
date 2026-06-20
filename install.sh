@@ -146,6 +146,7 @@ sudo systemctl enable NetworkManager
 sudo systemctl enable acpid
 sudo systemctl enable lightdm
 sudo systemctl enable bluetooth
+sudo systemctl start bluetooth || true
 sudo systemctl enable avahi-daemon
 
 echo
@@ -159,7 +160,7 @@ echo "[+] Installing JetBrainsMono Nerd Font"
 mkdir -p ~/.local/share/fonts
 cd /tmp
 
-wget -O JetBrainsMono.zip 
+wget -O JetBrainsMono.zip \
 https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 
 unzip -o JetBrainsMono.zip -d ~/.local/share/fonts/JetBrainsMono
@@ -195,11 +196,7 @@ echo "[+] Installing Ghostty"
 
 cd /tmp
 
-sudo apt install -y 
-zig 
-libgtk-4-dev 
-libadwaita-1-dev 
-blueprint-compiler
+sudo apt install -y zig libgtk-4-dev libadwaita-1-dev blueprint-compiler
 
 rm -rf ghostty
 git clone https://github.com/ghostty-org/ghostty
@@ -211,8 +208,8 @@ zig build -p ~/.local
 echo
 echo "[+] Installing Brave Browser"
 
-sudo curl -fsSLo 
-/usr/share/keyrings/brave-browser-archive-keyring.gpg 
+sudo curl -fsSLo \
+/usr/share/keyrings/brave-browser-archive-keyring.gpg \
 https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | 
