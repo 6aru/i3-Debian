@@ -1,4 +1,4 @@
-# GUIDE_ME.md
+# GUIDE ME
 
 This guide explains every component used by i3-Debian.
 
