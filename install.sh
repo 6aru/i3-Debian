@@ -203,16 +203,11 @@ sudo apt install -y brave-browser
 echo
 echo "[+] Installing Neovim"
 
-cd /tmp
+sudo apt install -y neovim 
 
-rm -rf neovim
-git clone https://github.com/neovim/neovim.git
-
-cd neovim
-
-make CMAKE_BUILD_TYPE=Release
-
-sudo make install
+echo
+echo " [+] Installing Baru's Nvim Config
+git clone https://github.com/6aru/nvim ~/.config/nvim
 
 echo
 echo "[+] Creating User Directories"
