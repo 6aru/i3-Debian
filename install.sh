@@ -82,6 +82,7 @@ xclip
 xsel
 jq
 light
+brightnessctl
 gsimplecal
 qimgv
 fd-find
@@ -226,7 +227,7 @@ echo "[+] Installing Neovim"
 sudo apt install -y neovim 
 
 echo
-echo " [+] Installing Baru's Nvim Config
+echo " [+] Installing Baru's Nvim Config "
 git clone https://github.com/6aru/nvim ~/.config/nvim
 
 echo
