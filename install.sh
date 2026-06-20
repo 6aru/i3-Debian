@@ -2,6 +2,8 @@
 
 set -e
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 echo "====================================="
 echo " i3-Debian Main Installer"
 echo " Debian 13"
@@ -224,7 +226,7 @@ echo "[+] Installing i3 Configuration"
 
 mkdir -p ~/.config
 
-cp -r i3 ~/.config/
+cp -r "$SCRIPT_DIR/i3" ~/.config/
 
 echo
 echo "[+] Installing Neovim"
