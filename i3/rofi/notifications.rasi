@@ -1,0 +1,53 @@
+
+
+window {
+location: northeast;
+anchor: northeast;
+
+```
+width: 520px;
+height: 420px;
+
+x-offset: -12px;
+y-offset: 50px;
+
+background-color: @bg;
+border: 3px;
+border-color: @border;
+border-radius: 15px;
+```
+
+}
+
+mainbox {
+padding: 15px;
+}
+
+inputbar {
+enabled: false;
+}
+
+listview {
+columns: 1;
+lines: 12;
+spacing: 6px;
+scrollbar: true;
+}
+
+element {
+padding: 10px;
+border-radius: 8px;
+}
+
+element selected {
+background-color: @accent;
+text-color: @bg;
+}
+
+scrollbar {
+width: 4px;
+}
+
+handle {
+background-color: @accent;
+}
