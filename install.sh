@@ -126,6 +126,8 @@ echo "[+] Enabling Services"
 sudo systemctl enable NetworkManager
 sudo systemctl enable acpid
 sudo systemctl enable lightdm
+sudo systemctl enable bluetooth
+sudo systemctl enable avahi-daemon
 
 echo
 echo "[+] Installing Autotiling"
@@ -211,6 +213,8 @@ git clone https://github.com/6aru/nvim ~/.config/nvim
 
 echo
 echo "[+] Creating User Directories"
+
+xdg-user-dirs-update
 
 mkdir -p ~/Pictures/Screenshots
 mkdir -p ~/Music
