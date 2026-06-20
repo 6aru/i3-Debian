@@ -43,6 +43,13 @@ dunst
 picom
 feh
 
+# GTK / Theme Support
+
+xsettingsd
+nwg-look
+xdg-user-dirs
+xdg-user-dirs-gtk
+
 # File Manager
 
 thunar
@@ -66,6 +73,7 @@ lxpolkit
 xfce4-power-manager
 acpi
 acpid
+avahi-daemon
 
 # Utilities
 
@@ -82,6 +90,12 @@ fzf
 bat
 tree
 zoxide
+libnotify-bin
+
+# Network Shares
+
+smbclient
+cifs-utils
 
 # Music
 
@@ -100,6 +114,10 @@ bluez
 
 zsh
 eza
+
+# Fonts
+
+fonts-font-awesome
 
 # Display Manager
 
