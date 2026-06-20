@@ -148,6 +148,7 @@ sudo systemctl enable lightdm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth || true
 sudo systemctl enable avahi-daemon
+sudo systemctl start avahi-daemon || true
 
 echo
 echo "[+] Installing Autotiling"
