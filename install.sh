@@ -234,6 +234,19 @@ chmod +x "$HOME"/.config/i3/scripts/*
 chmod +x "$HOME"/.config/i3/scripts/music/* 2>/dev/null || true
 fi
 
+# Ensure ~/.local/bin is on PATH
+
+if ! grep -qs '.local/bin' "$HOME/.xsessionrc" 2>/dev/null; then
+cat >> "$HOME/.xsessionrc" <<'EOF'
+
+# Added by i3-Debian-Main
+case ":$PATH:" in
+  *":$HOME/.local/bin:"*) ;;
+  *) PATH="$HOME/.local/bin:$PATH"; export PATH ;;
+esac
+EOF
+fi
+
 echo
 echo "[+] Verification"
 
