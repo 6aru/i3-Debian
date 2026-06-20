@@ -251,7 +251,7 @@ echo "[+] Enabling MPD"
 
 mkdir -p ~/.config/mpd
 
-cp mpd.conf ~/.config/mpd/mpd.conf
+cp "$SCRIPT_DIR/mpd.conf" ~/.config/mpd/mpd.conf
 
 systemctl --user enable mpd
 systemctl --user start mpd || true
@@ -262,6 +262,10 @@ echo "[+] Making i3 Scripts Executable"
 if [ -d "$HOME/.config/i3/scripts" ]; then
     find "$HOME/.config/i3/scripts" -type f -exec chmod +x {} \;
 fi
+
+# Ensure ~/.local/bin is available now
+
+export PATH="$HOME/.local/bin:$PATH"
 
 # Ensure ~/.local/bin is on PATH
 
