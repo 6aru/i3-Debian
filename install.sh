@@ -309,6 +309,6 @@ done
 echo
 echo "====================================="
 echo " Installation Complete"
-echo " Copy i3-Debian-main -> ~/.config/i3"
+echo " Log out and select i3"
 echo " Reboot"
 echo "====================================="
