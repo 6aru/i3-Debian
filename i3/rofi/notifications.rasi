@@ -13,7 +13,7 @@ y-offset: 50px;
 
 background-color: @bg;
 border: 3px;
-border-color: @border;
+border-color: @accent;
 border-radius: 15px;
 ```
 
@@ -41,7 +41,7 @@ border-radius: 8px;
 
 element selected {
 background-color: @accent;
-text-color: @bg;
+text-color: @fg;
 }
 
 scrollbar {
