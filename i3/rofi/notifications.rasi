@@ -1,4 +1,4 @@
-
+@import "~/.config/i3/rofi/colors.rasi"
 
 window {
 location: northeast;
