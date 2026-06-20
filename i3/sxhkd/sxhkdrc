@@ -330,6 +330,11 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
 	xbacklight -10
 
+# === NOTIFICATIONS ===
+
+super + n
+    ~/.config/i3/scripts/notification-center.sh
+
 # === SCREENSHOTS ===
 
 # Screenshot Menu
