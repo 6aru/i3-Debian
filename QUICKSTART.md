@@ -29,7 +29,7 @@ Welcome to the BARU'S i3 setup. This file is yours to delete once you're comfort
 - **i3 config:** `~/.config/i3/config`
 - **Keybinds (most):** `~/.config/i3/sxhkd/sxhkdrc` — edit and press `Super + Escape` to reload
 - **Scripts:** `~/.config/i3/scripts/`
-- **Theme switcher:** `~/.config/i3/scripts/thememenu` (12 themes available)
+- **Theme switcher:** `~/.config/i3/scripts/thememenu` (09 themes available)
 - **Theming:** `rofi/`, `polybar/`, `dunst/`, `picom/`
 
 ## Getting help
