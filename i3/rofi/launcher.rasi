@@ -1,6 +1,6 @@
 
 configuration {
-	font:							"JetBrainsMono Nerd Font 10";
+	font:							"Iosevka Nerd Font 10";
     show-icons:                     true;
 	icon-theme: 					"Colloid-Dark";
     display-drun: 					"";
@@ -31,7 +31,7 @@ prompt {
 	padding: 						10px;
 	background-color: 				@al;
 	text-color: 					@accent;
-	font:							"JetBrainMono Nerd Font 10";
+	font:							"Iosevka Nerd Font 10";
 }
 
 entry {
