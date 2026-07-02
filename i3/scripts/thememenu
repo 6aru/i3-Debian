@@ -137,7 +137,7 @@ echo "$target" > "$STATE"
 
 polybar-msg cmd quit 2>/dev/null || true
 i3-msg reload >/dev/null
-~/.config/i3/polybar/polybar-i3 &
+~/.config/i3/polybar/launch.sh &
 
 # 10. Restart dunst with new colors, then notify
 pkill -x dunst 2>/dev/null || true
