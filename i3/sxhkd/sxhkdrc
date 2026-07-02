@@ -2,7 +2,7 @@
 
 # Launch Rofi Application Menu
 super + space
-	rofi -show drun -modi drun -line-padding 4 -hide-scrollbar -show-icons -theme ~/.config/i3/rofi/config.rasi
+	rofi ~/.config/i3/polybar/scripts/launcher.sh
 
 # Launch Terminal (Ghostty)
 super + Return
@@ -357,5 +357,5 @@ super + shift + t
 
 # Power Menu Shutdown or Reboot
 super + x
-    ~/.config/i3/scripts/power
+    ~/.config/i3/polybar/scripts/powermenu.sh
 
