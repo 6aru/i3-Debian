@@ -1,7 +1,7 @@
 
 # Autostart applications
 ## Polybar or tint
-~/.config/i3/polybar/polybar-i3 &
+~/.config/i3/polybar/launch.sh &
 
 
 lxpolkit &
