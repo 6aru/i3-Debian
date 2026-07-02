@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-mpc playlist | \
-rofi -dmenu -p "Queue"
